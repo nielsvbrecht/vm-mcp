@@ -1,0 +1,24 @@
+{
+  "name": "vm-mcp",
+  "version": "1.0.0",
+  "description": "VictoriaMetrics extension for Gemini CLI",
+  "mcpServers": {
+    "victoriametrics": {
+      "command": "npx",
+      "args": ["-y", "mcp-victoriametrics"],
+      "env": {
+        "VM_INSTANCE_ENTRYPOINT": "http://localhost:8428",
+        "VM_INSTANCE_TYPE": "single"
+      }
+    },
+    "vmMcpInfo": {
+      "command": "node",
+      "args": ["${extensionPath}${/}index.js"],
+      "cwd": "${extensionPath}",
+      "env": {
+        "VM_INSTANCE_ENTRYPOINT": "http://localhost:8428",
+        "VM_INSTANCE_TYPE": "single"
+      }
+    }
+  }
+}

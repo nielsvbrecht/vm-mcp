@@ -1,0 +1,14 @@
+description = "Execute a MetricsQL query and get an AI-assisted summary of the results."
+
+prompt = """
+Execute the following MetricsQL query against the VictoriaMetrics instance:
+
+{{args}}
+
+When you receive the results, please provide:
+1. **Summary**: What the query measures and what the current values are.
+2. **Analysis**: Any interesting patterns, anomalies, or trends.
+3. **Recommendation**: Any actions to take based on the results.
+
+If the query is invalid or fails, please provide debugging steps and suggest a corrected version.
+"""

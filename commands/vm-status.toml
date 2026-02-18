@@ -1,0 +1,11 @@
+description = "Get the health and status of the VictoriaMetrics instance."
+
+prompt = """
+Check the health and status of the VictoriaMetrics instance using the available tools (e.g., `vm_status` or querying `vm_health`).
+
+Provide a concise summary of:
+- Is the instance alive and reachable?
+- Ingestion rate (rows inserted vs. ignored).
+- Any active errors or warnings.
+- Storage/Memory usage summary.
+"""
