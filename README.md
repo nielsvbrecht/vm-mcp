@@ -15,12 +15,23 @@ A specialized Gemini CLI extension for interacting with VictoriaMetrics instance
 
 ## Installation
 
-1.  **Clone or create the extension directory**:
-    Ensure you are in the extension's root directory.
+### For Users (from GitHub)
+Run the following command to install the extension directly from the repository:
+```bash
+gemini extensions install https://github.com/nielsvbrecht/vm-mcp.git
+```
 
-2.  **Install dependencies**:
+### For Developers (Local)
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/nielsvbrecht/vm-mcp.git
+    cd vm-mcp
+    ```
+
+2.  **Install dependencies and build**:
     ```bash
     npm install
+    npm run build
     ```
 
 3.  **Link the extension**:
