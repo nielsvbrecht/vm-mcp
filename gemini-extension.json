@@ -13,7 +13,7 @@
     },
     "vmMcpInfo": {
       "command": "node",
-      "args": ["${extensionPath}${/}index.js"],
+      "args": ["${extensionPath}${/}dist${/}index.js"],
       "cwd": "${extensionPath}",
       "env": {
         "VM_INSTANCE_ENTRYPOINT": "http://localhost:8428",

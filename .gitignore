@@ -6,3 +6,4 @@ yarn-debug.log*
 yarn-error.log*
 .env
 .gemini/
+# dist/ is included for faster installs as recommended
