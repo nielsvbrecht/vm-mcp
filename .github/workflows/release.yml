@@ -28,44 +28,44 @@ jobs:
 
       - name: Package extension (darwin)
         run: |
-          tar -czvf darwin.vm-mcp.tar.gz 
-            gemini-extension.json 
-            package.json 
-            README.md 
-            GEMINI.md 
-            dist/ 
-            commands/ 
+          tar -czvf ${{ github.ref_name }}.darwin.vm-mcp.tar.gz \
+            gemini-extension.json \
+            package.json \
+            README.md \
+            GEMINI.md \
+            dist/ \
+            commands/ \
             skills/
 
       - name: Package extension (linux)
         run: |
-          tar -czvf linux.vm-mcp.tar.gz 
-            gemini-extension.json 
-            package.json 
-            README.md 
-            GEMINI.md 
-            dist/ 
-            commands/ 
+          tar -czvf ${{ github.ref_name }}.linux.vm-mcp.tar.gz \
+            gemini-extension.json \
+            package.json \
+            README.md \
+            GEMINI.md \
+            dist/ \
+            commands/ \
             skills/
 
       - name: Package extension (win32)
         run: |
-          zip -r win32.vm-mcp.zip 
-            gemini-extension.json 
-            package.json 
-            README.md 
-            GEMINI.md 
-            dist/ 
-            commands/ 
+          zip -r ${{ github.ref_name }}.win32.vm-mcp.zip \
+            gemini-extension.json \
+            package.json \
+            README.md \
+            GEMINI.md \
+            dist/ \
+            commands/ \
             skills/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            darwin.vm-mcp.tar.gz
-            linux.vm-mcp.tar.gz
-            win32.vm-mcp.zip
+            ${{ github.ref_name }}.darwin.vm-mcp.tar.gz
+            ${{ github.ref_name }}.linux.vm-mcp.tar.gz
+            ${{ github.ref_name }}.win32.vm-mcp.zip
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
